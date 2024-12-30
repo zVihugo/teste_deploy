@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const login = async (email, password) => {
     try {
-        const response = await axios.post("http://localhost:8000/admin/login", {
+        const response = await axios.post("https://teste-deploy-sandy.vercel.app/admin/login", {
             email,
             password
         });

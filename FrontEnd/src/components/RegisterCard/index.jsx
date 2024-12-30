@@ -21,7 +21,7 @@ export const RegisterCard = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:8000/produto/cadastro',
+        'https://teste-deploy-sandy.vercel.app/produto/cadastro',
         {
           name: nomeDono,
           description: productDescription,
