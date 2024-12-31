@@ -24,7 +24,13 @@ app.get("/", (req, res) => {
     return res.status(200).json({ msg: "Hello World!" });
 });
 
-app.use(cors());
+const corsOptions = {
+  origin: '*', // Ou substitua por um domínio específico, como 'http://localhost:3000'
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Permitir os métodos necessários
+  allowedHeaders: ['Content-Type', 'Authorization'], // Personalize se necessário
+};
+app.use(cors(corsOptions));
+
 app.use(express.json());
 app.use(superUserRouter);
 app.use(pontoColetaRouter);
