@@ -35,7 +35,7 @@ export const CollectionPoint = () => {
   useEffect(() => {
     const fetchContributions = async () => {
       try {
-        const response = await axios.get('https://teste-deploy-sandy.vercel.app/produtos'); 
+        const response = await axios.get('http://localhost:8000/produtos'); 
           const data = response.data;
           console.log(data);
 

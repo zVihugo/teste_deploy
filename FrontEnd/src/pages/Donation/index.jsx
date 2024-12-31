@@ -13,7 +13,7 @@ export const Donation = () => {
   useEffect(() => {
     const fetchContributions = async () => {
       try {
-        const response = await axios.get('https://teste-deploy-sandy.vercel.app/posts');
+        const response = await axios.get('http://localhost:8000/posts');
         const data = response.data.posts;
 
         const formattedData = data.map((item) => ({
